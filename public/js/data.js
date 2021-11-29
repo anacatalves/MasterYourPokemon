@@ -1,6 +1,7 @@
 const pokemons = {
     "results": [
-        {
+        {   
+            //key:value
             "form_name": "",
             "form_names": [],
             "form_order": 1,
@@ -498,3 +499,6 @@ const pokemons = {
           }
     ]
   }
+
+
+/* console.log(pokemons.results[0]); */
