@@ -18,7 +18,7 @@ button{
     header{
         
         background-image: url("https://cdn.dribbble.com/users/916023/screenshots/15789224/media/79a4f29f19567cae0cbff93f45eea20b.png?compress=1&resize=800x600");
-        background:contain no-repeat;
+        background-size:contain;
         background-color: #1A093C;
 
         height:35vh;
@@ -33,39 +33,39 @@ button{
             padding:10px;
         }
         
-        img{
-            width: 108px;
-            height: 39px;
-            filter:invert(1);
-        }
+            & .logo img{
+                width: 108px;
+                height: 39px;
+                filter:invert(1);
+            }
 
         .search-button{
             display:flex;
-            justify-content: space-around;
+            justify-content:center;
             align-items: center;
             width:200px;
             height: 55px;
             border-radius: 50px;
-            border: 1px solid white;
             /* outline: 10px solid #1A093C; */
             background-color: #1A093C;
             
             margin:18px 40px;
         }
 
-        .search{
-            font-size: 15px;
+        .search-bar{
+            font-size: 18px;
             color:white;
             width:150px;
             height: 35px;
             border:none;
-            background-color: transparent;
+            background-color: #1A093C;
         }
 
         .search-button img{
             width: 20px;
             height: 20px;
-            filter:invert(1);
+            /* filter:invert(1); */
+            cursor:pointer;
         }
     }
 
@@ -130,7 +130,9 @@ button{
 
         p{
             color:white;
-            font-size: 14px;
+            font-size: 18px;
+            font-weight:500;
+            font-variant-caps: all-petite-caps;
             background-color: violet;
             border-radius: 25px;
             width:85px;
@@ -156,6 +158,19 @@ button{
                 height:28px;
                 filter:opacity(0.2)
             }
+
+            .undefined{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color:white;
+                color:#1A093C;
+                width:80%;
+                border-radius: 25px;
+                font-size:22px;
+
+            }    
     }
 
 }
