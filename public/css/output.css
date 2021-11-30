@@ -141,13 +141,25 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FCF2FC;
-  color: #8F138C;
   width: 350PX;
   height: 70PX;
   border-radius: 50px;
+  gap: 7px;
+  margin: 15px 10px 40px;
+  background-color: #FCF2FC;
+  color: #8F138C;
+  box-shadow: 17px 8px 25px #8F138C;
   font-size: 16px;
   font-weight: bold;
+}
+.body1 .items-list .undefined .undefined-btn {
+  width: auto;
+  background: transparent;
+  border: none;
+}
+.body1 .items-list .undefined .undefined-btn img {
+  width: 25px;
+  height: 25px;
 }
 
 .body2 {

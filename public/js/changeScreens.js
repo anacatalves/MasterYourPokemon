@@ -20,10 +20,14 @@ buttonSelect.forEach( (element) => {
 
 buttonExit.addEventListener('click', function () { toggleDetailScreen(false) })
 
+//Search bar - exit route
+let exitSearch = document.querySelector(".undefined-btn");
 
+function goBack() {
+    window.history.back();
+}
 
-
-
+exitSearch.addEventListener('click', goBack);
 
 
 // ANOTHER WAY TO DO IT:

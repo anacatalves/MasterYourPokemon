@@ -43,7 +43,10 @@ function searchItem (){
     matchItem = pokemons.results.find( item => item.name === searchedItem)
     
     if (matchItem === undefined) {
-        itemsE1.innerHTML = `<div class ="undefined">POKEMON NOT FOUND IN POKEDESK 💔</div>`
+        itemsE1.innerHTML = `<div class ="undefined">
+                            POKEMON NOT FOUND IN POKEDESK
+                            <button class ="undefined-btn"> <img src="img/close-icon.png"> </button>
+                            </div>`
     }
     else {
         itemsE1.innerHTML = `
@@ -70,3 +73,4 @@ function searchItem (){
 }
 
 searchButton.addEventListener('click', searchItem);
+
