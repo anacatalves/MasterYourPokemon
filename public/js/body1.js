@@ -43,7 +43,7 @@ function searchItem (){
     matchItem = pokemons.results.find( item => item.name === searchedItem)
     
     if (matchItem === undefined) {
-        itemsE1.innerHTML = `<div class ="undefined"> 💔 Pokémon not found in Pokédex 💔 </div>`
+        itemsE1.innerHTML = `<div class ="undefined">POKEMON NOT FOUND IN POKEDESK 💔</div>`
     }
     else {
         itemsE1.innerHTML = `
