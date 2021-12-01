@@ -1,8 +1,5 @@
-//SELECT POKEMONS
-const itemsE1 = document.querySelector(".items");
-
 //RENDER POKEMONS
-function renderItems(){
+function renderItems(pokemons, itemsE1){
     pokemons.results.forEach( (item) => {
         itemsE1.innerHTML += `
             <div class="item">
@@ -27,20 +24,11 @@ function renderItems(){
     })
 }
 
-renderItems();
-
 // SEARCH BAR FUNCTION
-
-// DECLARE VARIABLES
-let searchButton = document.querySelector(".search-button img");
-
-let searchedItem = null;
-let matchItem = null; 
-
-function searchItem (){
-    searchedItem = document.querySelector(".search-bar").value;
-
-    matchItem = pokemons.results.find( item => item.name === searchedItem)
+// Import variables as parameters from the main file (app.js) 
+function searchItem (pokemons, itemsE1, searchedItem){
+    
+    let matchItem = pokemons.results.find( item => item.name === searchedItem.value)
     
     if (matchItem === undefined) {
         itemsE1.innerHTML = `<div class ="undefined">
@@ -72,5 +60,5 @@ function searchItem (){
     }
 }
 
-searchButton.addEventListener('click', searchItem);
+export {renderItems, searchItem};
 

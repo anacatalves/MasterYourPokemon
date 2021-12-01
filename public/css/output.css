@@ -1,10 +1,10 @@
 body {
-  max-width: 500px;
+  height: 100%;
   background-color: #1A093C;
-  font-family: "Roboto", sans-serif;
 }
 
 * {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -13,6 +13,10 @@ button {
   cursor: pointer;
 }
 
+.body1 {
+  width: 100%;
+  max-width: 500px;
+}
 .body1 header {
   background-image: url("https://cdn.dribbble.com/users/916023/screenshots/15789224/media/79a4f29f19567cae0cbff93f45eea20b.png?compress=1&resize=800x600");
   background-size: cover;
@@ -229,6 +233,7 @@ button {
   justify-content: center;
   padding: 12px;
   font-size: 22px;
+  font-variant-caps: petite-caps;
 }
 .body2 .item-characteristics .item-stats {
   display: flex;

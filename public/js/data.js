@@ -501,4 +501,4 @@ const pokemons = {
   }
 
 
-/* console.log(pokemons.results[0]); */
+export default pokemons;
