@@ -14,7 +14,7 @@ function renderItems(pokemons, itemsE1){
                                 <p>${item.types[0].type.name}</p>
                             </div>
                             
-                            <button class="button-select">
+                            <button id="${item.id}" class="button-select">
                                 <img class ="next" src="img/next-icon.png">
                             </button>
 

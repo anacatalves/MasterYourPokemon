@@ -1,6 +1,6 @@
 import pokemons from "./data.js";
 import {renderItems, searchItem} from "./pokemonsList.js"
-import {renderItemDetails, getItem} from "./pokemonDetail.js"
+import {renderItemDetails} from "./pokemonDetail.js"
 
 
 //TOGGLE BETWEEN BODY 1 AND BODY 2 - VARIABLES
@@ -19,14 +19,19 @@ function init() {
 }
 init();
 
-let buttonSelect = document.querySelectorAll(".button-select");
+let buttonsSelect = document.querySelectorAll(".button-select");
 
 //TOGGLE BETWEEN BODY 1 AND BODY 2
-function toggleDetailScreen(showDetailScreen) {
+function toggleDetailScreen(showDetailScreen, pokemonId) {
     if(showDetailScreen) {
         body2.style.display = "block"
         body1.style.display = "none"
-        renderItemDetails(pokemons,selectedItemE1);
+
+        let selectedPokemon = pokemons.results.find((e) => e.id === pokemonId);
+
+        console.log(selectedPokemon)
+        
+        renderItemDetails(selectedPokemon,selectedItemE1);
 
     } else {
         body1.style.display = "block"
@@ -37,11 +42,13 @@ function toggleDetailScreen(showDetailScreen) {
 //Pass the same parameters here as in the functions
 searchButton.addEventListener('click', function () {searchItem(pokemons,itemsE1,searchedItem)} );
 
-buttonSelect.forEach( (element) => {
-    element.addEventListener('click', function() { toggleDetailScreen(true) })
+buttonsSelect.forEach( (element) => {
+    let pokemonId = parseInt(element.attributes["id"].value); //we use parseInt() because it was a string and we needed a number!
+
+    element.addEventListener('click', function() { toggleDetailScreen(true, pokemonId) })
 })
 
-buttonExit.addEventListener('click', function () { toggleDetailScreen(false) })
+buttonExit.addEventListener('click', function () { toggleDetailScreen(false, null) })
 
 
 
